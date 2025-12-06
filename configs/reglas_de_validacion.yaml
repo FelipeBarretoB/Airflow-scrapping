@@ -1,0 +1,25 @@
+fields:
+  title:
+    type: [str]
+    regex: "^[a-zA-Z0-9 ]{1,65}$"  # Máximo 65 caracteres, solo letras, números y espacios
+    required: true
+  created_at:
+    type: [datetime, str] #pongo los dos porque el lambda original se puede tener ambos tipos
+    regex: "^\\d{4}-\\d{2}-\\d{2}$"  # Formato de fecha: YYYY-MM-DD, es el formato esperado, aunque no siempre pasaba en el lambda original
+    required: true
+  external_link:
+    type: [str]
+    regex: "^http.*"  # Debe ser una URL válida
+    required: true
+  gtype:
+    type: [str]
+    regex: "^(link|None)$"  # Solo puede ser 'link' o None
+    required: false
+  summary:
+    type: [str]
+    regex: ".*"  # Cualquier texto es válido
+    required: false
+  rtype_id:
+    type: [int]
+    regex: "^-?[0-9]+$"  # Debe ser un número int
+    required: false
