@@ -1,4 +1,4 @@
-# Prueba Técnica – Refactorización de Scraping a Airflow DAG
+# Refactorización de Scraping a Airflow DAG
 
 ¡Hola!
 
